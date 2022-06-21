@@ -34,7 +34,7 @@ class Publisher(Generic[T], ABC):
 
         bytesData = json.dumps(data).encode('utf-8')
         await self.client.publish(
-            subject=str(self.subject),
+            subject=self.subject.value,
             payload=bytesData,
             ack_handler=lambda ack:  self.ack_handler(ack, future)
         )

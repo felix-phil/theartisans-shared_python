@@ -44,7 +44,7 @@ class Listener(ABC, Generic[T]):
     async def listen(self) -> asyncio.Future:
         future = asyncio.Future(loop=self.loop)
         await self.client.subscribe(
-            subject=str(self.subject),
+            subject=self.subject.value,
             ack_wait=self.ack_wait,
             deliver_all_available=True,
             queue=self.queue_group_name,
