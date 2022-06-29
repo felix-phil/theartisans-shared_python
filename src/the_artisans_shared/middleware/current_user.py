@@ -1,8 +1,7 @@
 import os
 from typing import Any, List, Optional, TypedDict, Callable
 import jwt
-from src.types import UserRoleValues, SubscriptionTypeValues
-# from functools import wraps
+from the_artisans_shared.types import UserRoleValues, SubscriptionTypeValues
 from flask import request
 
 class Subscription(TypedDict):

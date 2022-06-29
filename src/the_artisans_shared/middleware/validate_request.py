@@ -1,7 +1,7 @@
 from functools import wraps, partial
 from typing import Callable
 from flask import request
-from src.errors import RequestValidationError
+from the_artisans_shared.errors import RequestValidationError
 from marshmallow import ValidationError
 
     

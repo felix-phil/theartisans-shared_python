@@ -1,5 +1,5 @@
 from flask import jsonify
-from src.errors import CustomError
+from the_artisans_shared.errors import CustomError
 
 def exception_handler(e: Exception):
     if isinstance(e, CustomError):

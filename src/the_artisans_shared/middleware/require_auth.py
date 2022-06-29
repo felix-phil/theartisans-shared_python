@@ -1,7 +1,7 @@
 from functools import wraps
 from typing import Callable
 from flask import request
-from src.errors import NotAuthorizedError
+from the_artisans_shared.errors import NotAuthorizedError
 
 def require_auth(f: Callable):
     @wraps(f)
